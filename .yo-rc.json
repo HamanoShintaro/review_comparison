@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.comparison.app",
+      "nativeLanguage": "ja"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "review_comparison",
+    "packageName": "com.comparison.app",
+    "packageFolder": "com/comparison/app",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZGNiZTA3ODFiNzMzY2Y2YzUwMDk0YjYyMGRiOGUwZDkxZWJiYzMwODdkNzQzMTA5M2Y1OTU5ODhiZDdhYWEwNzQ0MDc5MzBjMzNhNDEwZDY0ODY1OGJiNWY4OTJiNjlhYWFkZDcyYTJmZmI3ZDkwM2NhNGZiMWQyMDhhZGVhODQ=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ja",
+    "languages": [
+      "ja"
+    ]
+  }
+}
