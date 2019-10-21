@@ -42,7 +42,7 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="linkurl" type="varchar(255)">
+            <column name="link_url" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
 

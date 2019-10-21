@@ -59,11 +59,11 @@ export class ItemsDetail extends React.Component<IItemsDetailProps> {
             </dt>
             <dd>{itemsEntity.reviewEvaluation}</dd>
             <dt>
-              <span id="linkurl">
-                <Translate contentKey="reviewComparisonApp.items.linkurl">Linkurl</Translate>
+              <span id="linkUrl">
+                <Translate contentKey="reviewComparisonApp.items.linkUrl">Link Url</Translate>
               </span>
             </dt>
-            <dd>{itemsEntity.linkurl}</dd>
+            <dd>{itemsEntity.linkUrl}</dd>
             <dt>
               <span id="cleated">
                 <Translate contentKey="reviewComparisonApp.items.cleated">Cleated</Translate>

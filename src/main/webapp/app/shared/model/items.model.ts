@@ -9,7 +9,7 @@ export interface IItems {
   price?: number;
   reviewNumber?: number;
   reviewEvaluation?: number;
-  linkurl?: string;
+  linkUrl?: string;
   cleated?: Moment;
   updated?: Moment;
   tags?: ITags[];

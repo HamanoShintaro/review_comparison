@@ -42,8 +42,8 @@ public class Items implements Serializable {
     @Column(name = "review_evaluation")
     private Double reviewEvaluation;
 
-    @Column(name = "linkurl")
-    private String linkurl;
+    @Column(name = "link_url")
+    private String linkUrl;
 
     @Column(name = "cleated")
     private Instant cleated;
@@ -132,17 +132,17 @@ public class Items implements Serializable {
         this.reviewEvaluation = reviewEvaluation;
     }
 
-    public String getLinkurl() {
-        return linkurl;
+    public String getLinkUrl() {
+        return linkUrl;
     }
 
-    public Items linkurl(String linkurl) {
-        this.linkurl = linkurl;
+    public Items linkUrl(String linkUrl) {
+        this.linkUrl = linkUrl;
         return this;
     }
 
-    public void setLinkurl(String linkurl) {
-        this.linkurl = linkurl;
+    public void setLinkUrl(String linkUrl) {
+        this.linkUrl = linkUrl;
     }
 
     public Instant getCleated() {
@@ -239,7 +239,7 @@ public class Items implements Serializable {
             ", price=" + getPrice() +
             ", reviewNumber=" + getReviewNumber() +
             ", reviewEvaluation=" + getReviewEvaluation() +
-            ", linkurl='" + getLinkurl() + "'" +
+            ", linkUrl='" + getLinkUrl() + "'" +
             ", cleated='" + getCleated() + "'" +
             ", updated='" + getUpdated() + "'" +
             "}";

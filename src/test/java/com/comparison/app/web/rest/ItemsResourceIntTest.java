@@ -57,8 +57,8 @@ public class ItemsResourceIntTest {
     private static final Double DEFAULT_REVIEW_EVALUATION = 1D;
     private static final Double UPDATED_REVIEW_EVALUATION = 2D;
 
-    private static final String DEFAULT_LINKURL = "AAAAAAAAAA";
-    private static final String UPDATED_LINKURL = "BBBBBBBBBB";
+    private static final String DEFAULT_LINK_URL = "AAAAAAAAAA";
+    private static final String UPDATED_LINK_URL = "BBBBBBBBBB";
 
     private static final Instant DEFAULT_CLEATED = Instant.ofEpochMilli(0L);
     private static final Instant UPDATED_CLEATED = Instant.now().truncatedTo(ChronoUnit.MILLIS);
@@ -113,7 +113,7 @@ public class ItemsResourceIntTest {
             .price(DEFAULT_PRICE)
             .reviewNumber(DEFAULT_REVIEW_NUMBER)
             .reviewEvaluation(DEFAULT_REVIEW_EVALUATION)
-            .linkurl(DEFAULT_LINKURL)
+            .linkUrl(DEFAULT_LINK_URL)
             .cleated(DEFAULT_CLEATED)
             .updated(DEFAULT_UPDATED);
         return items;
@@ -144,7 +144,7 @@ public class ItemsResourceIntTest {
         assertThat(testItems.getPrice()).isEqualTo(DEFAULT_PRICE);
         assertThat(testItems.getReviewNumber()).isEqualTo(DEFAULT_REVIEW_NUMBER);
         assertThat(testItems.getReviewEvaluation()).isEqualTo(DEFAULT_REVIEW_EVALUATION);
-        assertThat(testItems.getLinkurl()).isEqualTo(DEFAULT_LINKURL);
+        assertThat(testItems.getLinkUrl()).isEqualTo(DEFAULT_LINK_URL);
         assertThat(testItems.getCleated()).isEqualTo(DEFAULT_CLEATED);
         assertThat(testItems.getUpdated()).isEqualTo(DEFAULT_UPDATED);
     }
@@ -184,7 +184,7 @@ public class ItemsResourceIntTest {
             .andExpect(jsonPath("$.[*].price").value(hasItem(DEFAULT_PRICE)))
             .andExpect(jsonPath("$.[*].reviewNumber").value(hasItem(DEFAULT_REVIEW_NUMBER)))
             .andExpect(jsonPath("$.[*].reviewEvaluation").value(hasItem(DEFAULT_REVIEW_EVALUATION.doubleValue())))
-            .andExpect(jsonPath("$.[*].linkurl").value(hasItem(DEFAULT_LINKURL.toString())))
+            .andExpect(jsonPath("$.[*].linkUrl").value(hasItem(DEFAULT_LINK_URL.toString())))
             .andExpect(jsonPath("$.[*].cleated").value(hasItem(DEFAULT_CLEATED.toString())))
             .andExpect(jsonPath("$.[*].updated").value(hasItem(DEFAULT_UPDATED.toString())));
     }
@@ -205,7 +205,7 @@ public class ItemsResourceIntTest {
             .andExpect(jsonPath("$.price").value(DEFAULT_PRICE))
             .andExpect(jsonPath("$.reviewNumber").value(DEFAULT_REVIEW_NUMBER))
             .andExpect(jsonPath("$.reviewEvaluation").value(DEFAULT_REVIEW_EVALUATION.doubleValue()))
-            .andExpect(jsonPath("$.linkurl").value(DEFAULT_LINKURL.toString()))
+            .andExpect(jsonPath("$.linkUrl").value(DEFAULT_LINK_URL.toString()))
             .andExpect(jsonPath("$.cleated").value(DEFAULT_CLEATED.toString()))
             .andExpect(jsonPath("$.updated").value(DEFAULT_UPDATED.toString()));
     }
@@ -236,7 +236,7 @@ public class ItemsResourceIntTest {
             .price(UPDATED_PRICE)
             .reviewNumber(UPDATED_REVIEW_NUMBER)
             .reviewEvaluation(UPDATED_REVIEW_EVALUATION)
-            .linkurl(UPDATED_LINKURL)
+            .linkUrl(UPDATED_LINK_URL)
             .cleated(UPDATED_CLEATED)
             .updated(UPDATED_UPDATED);
 
@@ -254,7 +254,7 @@ public class ItemsResourceIntTest {
         assertThat(testItems.getPrice()).isEqualTo(UPDATED_PRICE);
         assertThat(testItems.getReviewNumber()).isEqualTo(UPDATED_REVIEW_NUMBER);
         assertThat(testItems.getReviewEvaluation()).isEqualTo(UPDATED_REVIEW_EVALUATION);
-        assertThat(testItems.getLinkurl()).isEqualTo(UPDATED_LINKURL);
+        assertThat(testItems.getLinkUrl()).isEqualTo(UPDATED_LINK_URL);
         assertThat(testItems.getCleated()).isEqualTo(UPDATED_CLEATED);
         assertThat(testItems.getUpdated()).isEqualTo(UPDATED_UPDATED);
     }

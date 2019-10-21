@@ -54,7 +54,7 @@ export class Items extends React.Component<IItemsProps> {
                   <Translate contentKey="reviewComparisonApp.items.reviewEvaluation">Review Evaluation</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="reviewComparisonApp.items.linkurl">Linkurl</Translate>
+                  <Translate contentKey="reviewComparisonApp.items.linkUrl">Link Url</Translate>
                 </th>
                 <th>
                   <Translate contentKey="reviewComparisonApp.items.cleated">Cleated</Translate>
@@ -78,7 +78,7 @@ export class Items extends React.Component<IItemsProps> {
                   <td>{items.price}</td>
                   <td>{items.reviewNumber}</td>
                   <td>{items.reviewEvaluation}</td>
-                  <td>{items.linkurl}</td>
+                  <td>{items.linkUrl}</td>
                   <td>
                     <TextFormat type="date" value={items.cleated} format={APP_DATE_FORMAT} />
                   </td>

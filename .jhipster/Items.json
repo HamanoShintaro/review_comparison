@@ -22,7 +22,7 @@
             "fieldType": "Double"
         },
         {
-            "fieldName": "linkurl",
+            "fieldName": "linkUrl",
             "fieldType": "String"
         },
         {

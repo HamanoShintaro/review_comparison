@@ -129,10 +129,10 @@ export class ItemsUpdate extends React.Component<IItemsUpdateProps, IItemsUpdate
                   <AvField id="items-reviewEvaluation" type="string" className="form-control" name="reviewEvaluation" />
                 </AvGroup>
                 <AvGroup>
-                  <Label id="linkurlLabel" for="linkurl">
-                    <Translate contentKey="reviewComparisonApp.items.linkurl">Linkurl</Translate>
+                  <Label id="linkUrlLabel" for="linkUrl">
+                    <Translate contentKey="reviewComparisonApp.items.linkUrl">Link Url</Translate>
                   </Label>
-                  <AvField id="items-linkurl" type="text" name="linkurl" />
+                  <AvField id="items-linkUrl" type="text" name="linkUrl" />
                 </AvGroup>
                 <AvGroup>
                   <Label id="cleatedLabel" for="cleated">

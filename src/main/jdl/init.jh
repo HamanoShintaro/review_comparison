@@ -5,7 +5,7 @@ entity Items {
     price Integer,
     reviewNumber Integer,
     reviewEvaluation Double,
-    linkurl String,
+    linkUrl String,
     cleated Instant,
     updated Instant
 }
