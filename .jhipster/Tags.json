@@ -1,0 +1,36 @@
+{
+    "name": "Tags",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cleated",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "items",
+            "otherEntityRelationshipName": "tags",
+            "relationshipName": "items",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191021201223",
+    "entityTableName": "tags",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,29 @@
+{
+  "reviewComparisonApp": {
+    "reviewReveals": {
+      "home": {
+        "title": "ReviewReveals",
+        "createLabel": "Review Reveals を追加",
+        "createOrEditLabel": "Review Revealsを追加または編集"
+      },
+      "created": "A new Review Reveals is created with identifier {{ param }}",
+      "updated": "A Review Reveals is updated with identifier {{ param }}",
+      "deleted": "A Review Reveals is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Review Reveals {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Review Reveals"
+      },
+      "tanteiRatio": "Tantei Ratio",
+      "tanteiReview": "Tantei Review",
+      "checkerRatio": "Checker Ratio",
+      "checkerReview": "Checker Review",
+      "filterdRatio": "Filterd Ratio",
+      "filterdReview": "Filterd Review",
+      "cleated": "Cleated",
+      "updated": "Updated",
+      "items": "Items"
+    }
+  }
+}

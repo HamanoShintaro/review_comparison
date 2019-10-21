@@ -1,0 +1,34 @@
+entity Items {
+	id Integer,
+    amazonId String,
+  	name String,   
+    price Integer,
+    reviewNumber Integer,
+    reviewEvaluation Double,
+    linkUrl String,
+    cleated Instant,
+    updated Instant
+}
+entity Tags{
+    id Integer,
+    name String,
+	cleated Instant,
+	updated Instant
+}
+entity ReviewReveals {
+	id Integer,
+	tanteiRatio Integer,
+	tanteiReview Double,
+	checkerRatio Integer,
+	checkerReview Double,
+	filterdRatio Integer,
+	filterdReview Double,
+	cleated Instant,
+	updated Instant
+}
+relationship ManyToMany {
+	Items to Tags
+}
+relationship OneToOne {
+	Items to ReviewReveals
+}

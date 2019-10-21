@@ -1,0 +1,64 @@
+{
+    "name": "Items",
+    "fields": [
+        {
+            "fieldName": "amazonId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "reviewNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "reviewEvaluation",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "linkUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cleated",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "reviewReveals",
+            "otherEntityRelationshipName": "items",
+            "relationshipName": "reviewReveals",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "tags",
+            "otherEntityRelationshipName": "items",
+            "relationshipName": "tags",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191021201222",
+    "entityTableName": "items",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
