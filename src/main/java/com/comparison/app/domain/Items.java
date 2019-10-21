@@ -1,0 +1,247 @@
+package com.comparison.app.domain;
+
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+
+import java.io.Serializable;
+import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Objects;
+
+/**
+ * A Items.
+ */
+@Entity
+@Table(name = "items")
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+public class Items implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "amazon_id")
+    private String amazonId;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "price")
+    private Integer price;
+
+    @Column(name = "review_number")
+    private Integer reviewNumber;
+
+    @Column(name = "review_evaluation")
+    private Double reviewEvaluation;
+
+    @Column(name = "linkurl")
+    private String linkurl;
+
+    @Column(name = "cleated")
+    private Instant cleated;
+
+    @Column(name = "updated")
+    private Instant updated;
+
+    @OneToMany(mappedBy = "items")
+    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+    private Set<Tags> tags = new HashSet<>();
+    @OneToOne(mappedBy = "items")
+    @JsonIgnore
+    private ReviewReveals reviewReveals;
+
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getAmazonId() {
+        return amazonId;
+    }
+
+    public Items amazonId(String amazonId) {
+        this.amazonId = amazonId;
+        return this;
+    }
+
+    public void setAmazonId(String amazonId) {
+        this.amazonId = amazonId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Items name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public Items price(Integer price) {
+        this.price = price;
+        return this;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getReviewNumber() {
+        return reviewNumber;
+    }
+
+    public Items reviewNumber(Integer reviewNumber) {
+        this.reviewNumber = reviewNumber;
+        return this;
+    }
+
+    public void setReviewNumber(Integer reviewNumber) {
+        this.reviewNumber = reviewNumber;
+    }
+
+    public Double getReviewEvaluation() {
+        return reviewEvaluation;
+    }
+
+    public Items reviewEvaluation(Double reviewEvaluation) {
+        this.reviewEvaluation = reviewEvaluation;
+        return this;
+    }
+
+    public void setReviewEvaluation(Double reviewEvaluation) {
+        this.reviewEvaluation = reviewEvaluation;
+    }
+
+    public String getLinkurl() {
+        return linkurl;
+    }
+
+    public Items linkurl(String linkurl) {
+        this.linkurl = linkurl;
+        return this;
+    }
+
+    public void setLinkurl(String linkurl) {
+        this.linkurl = linkurl;
+    }
+
+    public Instant getCleated() {
+        return cleated;
+    }
+
+    public Items cleated(Instant cleated) {
+        this.cleated = cleated;
+        return this;
+    }
+
+    public void setCleated(Instant cleated) {
+        this.cleated = cleated;
+    }
+
+    public Instant getUpdated() {
+        return updated;
+    }
+
+    public Items updated(Instant updated) {
+        this.updated = updated;
+        return this;
+    }
+
+    public void setUpdated(Instant updated) {
+        this.updated = updated;
+    }
+
+    public Set<Tags> getTags() {
+        return tags;
+    }
+
+    public Items tags(Set<Tags> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    public Items addTags(Tags tags) {
+        this.tags.add(tags);
+        tags.setItems(this);
+        return this;
+    }
+
+    public Items removeTags(Tags tags) {
+        this.tags.remove(tags);
+        tags.setItems(null);
+        return this;
+    }
+
+    public void setTags(Set<Tags> tags) {
+        this.tags = tags;
+    }
+
+    public ReviewReveals getReviewReveals() {
+        return reviewReveals;
+    }
+
+    public Items reviewReveals(ReviewReveals reviewReveals) {
+        this.reviewReveals = reviewReveals;
+        return this;
+    }
+
+    public void setReviewReveals(ReviewReveals reviewReveals) {
+        this.reviewReveals = reviewReveals;
+    }
+    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Items items = (Items) o;
+        if (items.getId() == null || getId() == null) {
+            return false;
+        }
+        return Objects.equals(getId(), items.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Items{" +
+            "id=" + getId() +
+            ", amazonId='" + getAmazonId() + "'" +
+            ", name='" + getName() + "'" +
+            ", price=" + getPrice() +
+            ", reviewNumber=" + getReviewNumber() +
+            ", reviewEvaluation=" + getReviewEvaluation() +
+            ", linkurl='" + getLinkurl() + "'" +
+            ", cleated='" + getCleated() + "'" +
+            ", updated='" + getUpdated() + "'" +
+            "}";
+    }
+}

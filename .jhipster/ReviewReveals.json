@@ -1,0 +1,60 @@
+{
+    "name": "ReviewReveals",
+    "fields": [
+        {
+            "fieldName": "itemId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tanteiRatio",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tanteiReview",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "checkerRatio",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "checkerReview",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "filterdRatio",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "filterdReview",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "cleated",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "updated",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "items",
+            "otherEntityRelationshipName": "reviewReveals",
+            "relationshipName": "items",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191021170942",
+    "entityTableName": "review_reveals",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
