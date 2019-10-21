@@ -30,12 +30,6 @@ export class ReviewRevealsDetail extends React.Component<IReviewRevealsDetailPro
           </h2>
           <dl className="jh-entity-details">
             <dt>
-              <span id="itemId">
-                <Translate contentKey="reviewComparisonApp.reviewReveals.itemId">Item Id</Translate>
-              </span>
-            </dt>
-            <dd>{reviewRevealsEntity.itemId}</dd>
-            <dt>
               <span id="tanteiRatio">
                 <Translate contentKey="reviewComparisonApp.reviewReveals.tanteiRatio">Tantei Ratio</Translate>
               </span>

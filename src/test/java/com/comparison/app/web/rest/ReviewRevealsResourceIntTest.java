@@ -42,9 +42,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = ReviewComparisonApp.class)
 public class ReviewRevealsResourceIntTest {
 
-    private static final Integer DEFAULT_ITEM_ID = 1;
-    private static final Integer UPDATED_ITEM_ID = 2;
-
     private static final Integer DEFAULT_TANTEI_RATIO = 1;
     private static final Integer UPDATED_TANTEI_RATIO = 2;
 
@@ -111,7 +108,6 @@ public class ReviewRevealsResourceIntTest {
      */
     public static ReviewReveals createEntity(EntityManager em) {
         ReviewReveals reviewReveals = new ReviewReveals()
-            .itemId(DEFAULT_ITEM_ID)
             .tanteiRatio(DEFAULT_TANTEI_RATIO)
             .tanteiReview(DEFAULT_TANTEI_REVIEW)
             .checkerRatio(DEFAULT_CHECKER_RATIO)
@@ -143,7 +139,6 @@ public class ReviewRevealsResourceIntTest {
         List<ReviewReveals> reviewRevealsList = reviewRevealsRepository.findAll();
         assertThat(reviewRevealsList).hasSize(databaseSizeBeforeCreate + 1);
         ReviewReveals testReviewReveals = reviewRevealsList.get(reviewRevealsList.size() - 1);
-        assertThat(testReviewReveals.getItemId()).isEqualTo(DEFAULT_ITEM_ID);
         assertThat(testReviewReveals.getTanteiRatio()).isEqualTo(DEFAULT_TANTEI_RATIO);
         assertThat(testReviewReveals.getTanteiReview()).isEqualTo(DEFAULT_TANTEI_REVIEW);
         assertThat(testReviewReveals.getCheckerRatio()).isEqualTo(DEFAULT_CHECKER_RATIO);
@@ -184,7 +179,6 @@ public class ReviewRevealsResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(reviewReveals.getId().intValue())))
-            .andExpect(jsonPath("$.[*].itemId").value(hasItem(DEFAULT_ITEM_ID)))
             .andExpect(jsonPath("$.[*].tanteiRatio").value(hasItem(DEFAULT_TANTEI_RATIO)))
             .andExpect(jsonPath("$.[*].tanteiReview").value(hasItem(DEFAULT_TANTEI_REVIEW.doubleValue())))
             .andExpect(jsonPath("$.[*].checkerRatio").value(hasItem(DEFAULT_CHECKER_RATIO)))
@@ -206,7 +200,6 @@ public class ReviewRevealsResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(reviewReveals.getId().intValue()))
-            .andExpect(jsonPath("$.itemId").value(DEFAULT_ITEM_ID))
             .andExpect(jsonPath("$.tanteiRatio").value(DEFAULT_TANTEI_RATIO))
             .andExpect(jsonPath("$.tanteiReview").value(DEFAULT_TANTEI_REVIEW.doubleValue()))
             .andExpect(jsonPath("$.checkerRatio").value(DEFAULT_CHECKER_RATIO))
@@ -238,7 +231,6 @@ public class ReviewRevealsResourceIntTest {
         // Disconnect from session so that the updates on updatedReviewReveals are not directly saved in db
         em.detach(updatedReviewReveals);
         updatedReviewReveals
-            .itemId(UPDATED_ITEM_ID)
             .tanteiRatio(UPDATED_TANTEI_RATIO)
             .tanteiReview(UPDATED_TANTEI_REVIEW)
             .checkerRatio(UPDATED_CHECKER_RATIO)
@@ -257,7 +249,6 @@ public class ReviewRevealsResourceIntTest {
         List<ReviewReveals> reviewRevealsList = reviewRevealsRepository.findAll();
         assertThat(reviewRevealsList).hasSize(databaseSizeBeforeUpdate);
         ReviewReveals testReviewReveals = reviewRevealsList.get(reviewRevealsList.size() - 1);
-        assertThat(testReviewReveals.getItemId()).isEqualTo(UPDATED_ITEM_ID);
         assertThat(testReviewReveals.getTanteiRatio()).isEqualTo(UPDATED_TANTEI_RATIO);
         assertThat(testReviewReveals.getTanteiReview()).isEqualTo(UPDATED_TANTEI_REVIEW);
         assertThat(testReviewReveals.getCheckerRatio()).isEqualTo(UPDATED_CHECKER_RATIO);

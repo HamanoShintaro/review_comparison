@@ -2,10 +2,6 @@
     "name": "ReviewReveals",
     "fields": [
         {
-            "fieldName": "itemId",
-            "fieldType": "Integer"
-        },
-        {
             "fieldName": "tanteiRatio",
             "fieldType": "Integer"
         },

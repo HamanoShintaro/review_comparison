@@ -39,9 +39,6 @@ export class ReviewReveals extends React.Component<IReviewRevealsProps> {
                   <Translate contentKey="global.field.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="reviewComparisonApp.reviewReveals.itemId">Item Id</Translate>
-                </th>
-                <th>
                   <Translate contentKey="reviewComparisonApp.reviewReveals.tanteiRatio">Tantei Ratio</Translate>
                 </th>
                 <th>
@@ -79,7 +76,6 @@ export class ReviewReveals extends React.Component<IReviewRevealsProps> {
                       {reviewReveals.id}
                     </Button>
                   </td>
-                  <td>{reviewReveals.itemId}</td>
                   <td>{reviewReveals.tanteiRatio}</td>
                   <td>{reviewReveals.tanteiReview}</td>
                   <td>{reviewReveals.checkerRatio}</td>

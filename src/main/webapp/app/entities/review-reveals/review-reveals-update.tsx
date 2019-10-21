@@ -99,12 +99,6 @@ export class ReviewRevealsUpdate extends React.Component<IReviewRevealsUpdatePro
                   </AvGroup>
                 ) : null}
                 <AvGroup>
-                  <Label id="itemIdLabel" for="itemId">
-                    <Translate contentKey="reviewComparisonApp.reviewReveals.itemId">Item Id</Translate>
-                  </Label>
-                  <AvField id="review-reveals-itemId" type="string" className="form-control" name="itemId" />
-                </AvGroup>
-                <AvGroup>
                   <Label id="tanteiRatioLabel" for="tanteiRatio">
                     <Translate contentKey="reviewComparisonApp.reviewReveals.tanteiRatio">Tantei Ratio</Translate>
                   </Label>

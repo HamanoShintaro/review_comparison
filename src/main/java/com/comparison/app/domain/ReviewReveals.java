@@ -24,9 +24,6 @@ public class ReviewReveals implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "item_id")
-    private Integer itemId;
-
     @Column(name = "tantei_ratio")
     private Integer tanteiRatio;
 
@@ -62,19 +59,6 @@ public class ReviewReveals implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getItemId() {
-        return itemId;
-    }
-
-    public ReviewReveals itemId(Integer itemId) {
-        this.itemId = itemId;
-        return this;
-    }
-
-    public void setItemId(Integer itemId) {
-        this.itemId = itemId;
     }
 
     public Integer getTanteiRatio() {
@@ -219,7 +203,6 @@ public class ReviewReveals implements Serializable {
     public String toString() {
         return "ReviewReveals{" +
             "id=" + getId() +
-            ", itemId=" + getItemId() +
             ", tanteiRatio=" + getTanteiRatio() +
             ", tanteiReview=" + getTanteiReview() +
             ", checkerRatio=" + getCheckerRatio() +
