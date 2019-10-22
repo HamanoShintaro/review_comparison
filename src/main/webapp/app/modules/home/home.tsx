@@ -21,6 +21,22 @@ export class Home extends React.Component<IHomeProp> {
     return (
       <Row>
         <Col md="9">
+          <div>
+            <Row>
+              <Col md="2">
+                <div className="bg-light rounded p-2 m-2">TOP</div>
+              </Col>
+              <Col md="2">
+                <div className="bg-light rounded p-2 m-2">Search</div>
+              </Col>
+              <Col md="2">
+                <div className="bg-light rounded p-2 m-2">Agreements</div>
+              </Col>
+              <Col md="2">
+                <div className="bg-light rounded p-2 m-2">Overview</div>
+              </Col>
+            </Row>
+          </div>
           <h2>
             <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
           </h2>
@@ -50,7 +66,8 @@ export class Home extends React.Component<IHomeProp> {
               </Alert>
 
               <Alert color="warning">
-                <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
+                <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>
+                &nbsp;
                 <Link to="/register" className="alert-link">
                   <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
                 </Link>
@@ -93,7 +110,8 @@ export class Home extends React.Component<IHomeProp> {
             <Translate contentKey="home.like">If you like JHipster, do not forget to give us a star on</Translate>{' '}
             <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
               Github
-            </a>!
+            </a>
+            !
           </p>
         </Col>
         <Col md="3" className="pad">
